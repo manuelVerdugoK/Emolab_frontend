@@ -1,0 +1,37 @@
+.registro_box{
+    width: 400px;
+    height: 400px;
+    margin:0 auto;
+}
+.form_registro{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    margin:auto;
+}
+.form_titlebox{
+    margin:1em;
+}
+.form_title{
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+}
+.lbl{
+    margin-top: 1em;
+}
+.input_form{
+    height: 30px;
+    border: none;
+    padding:2px;
+    background-color: aliceblue;
+}
+.btn_form{
+    margin-top: 1.5em;
+    border: none;
+    height: 35px;
+    background-color: rgb(232, 239, 243);
+}
+.pre_radius{
+    border-radius: 7px;
+}

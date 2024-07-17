@@ -35,10 +35,10 @@ export default function Navbar() {
 
                 <div className="navbar_account display_row">
                     <div className="account_register display_colum">
-                        <span>Registrarse</span>
+                        <Link className="nav_item" to="/Registro">Registrarse</Link>
                     </div>
                     <div className="account_login display_colum">
-                        <span>Login</span>
+                        <Link className="nav_item" to="/Login">Login</Link>
                     </div>
                 </div>
 

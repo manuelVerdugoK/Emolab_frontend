@@ -1,16 +1,10 @@
 import React, { useState } from 'react'
-import './RegistroForm.css'
+import './LoginForm.css'
 
-export default function RegistroForm() {
+export default function LoginForm() {
 
-    const [name, setName] = useState('');
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('');
-    const [repeatPassword, setRepeatPassword] = useState('');
-
-    const inpuNametHandler = (event) => {
-        setName(event.target.value);
-    };
 
     const inputEmailHandler = (event) => {
         setEmail(event.target.value);
@@ -20,36 +14,24 @@ export default function RegistroForm() {
         setPassword(event.target.value);
     };
 
-    const inputrepeatPasswordHandler = (event) => {
-        setRepeatPassword(event.target.value);
-    };
 
     const handleAllInputs = () =>{
-        if (name.length <=5){
-            alert("El campo 'Nombre' tiene un largo mínimo de 5 caracteres.");
-        }
+
         if (email.length <=0){
             alert("Debe completar el campo 'Email' para registrase.")
         }
-        if (password.length <=0 && repeatPassword.length<=0){
+        if (password.length <=0){
             alert("Debe completar el campo 'Password' para registrase.")
         }
         
     }
+
     const handleSubmit = async (event) => {
         event.preventDefault();
         handleAllInputs();
 
-
-        // Validar que las contraseñas coincidan antes de enviar el formulario
-        if (password !== repeatPassword) {
-            alert('Las contraseñas no coinciden');
-            return;
-        }
-
         // Construir el objeto de datos a enviar
         const formData = {
-            name: name,
             email: email,
             password: password
         };
@@ -83,20 +65,19 @@ export default function RegistroForm() {
 
         <div className='registro_box'>
             <div className='form_titlebox'>
-                <h1 className='form_title'>Registro de usuarios</h1>
+                <h1 className='form_title'>Autenticación de usuario</h1>
             </div>
 
             <form className='form_registro' onSubmit={handleSubmit}>
-                <label className='lbl'>Nombre</label>
-                <input className=' input_form' name='name' type='text' placeholder='Pepe' onChange={inpuNametHandler} minLength={5}/>
+               
                 <label className='lbl' >Correo electrónico</label>
                 <input className=' input_form' name='email' type='email' placeholder='correo@correo.com' onChange={inputEmailHandler} />
                 <label className='lbl'>Contrasñea</label>
                 <input className=' input_form' name='first_password' type='password'  onChange={inputPasswordHandler} minLength={10}/>
-                <label className='lbl'>Repita contraseña</label>
-                <input className=' input_form' name='second_password' type='password'  onChange={inputrepeatPasswordHandler} minLength={10}/>
 
+                <button className='btn_form pre_radius' type='submit'>Log In</button>
                 <button className='btn_form pre_radius' type='submit'>Registrarse</button>
+                <button className='btn_form pre_radius' type='submit'>Olvidé mi contraseña</button>
             </form>
         </div>
     )

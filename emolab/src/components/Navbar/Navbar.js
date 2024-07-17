@@ -20,15 +20,15 @@ export default function Navbar() {
                 <ul className="navbar_nav display_row">
 
                     <li className="nav_elements display_colum">
-                        <Link className="nav_item" to="/">Home</Link>
+                        <Link className="nav_item" to="/">Inicio</Link>
                     </li>
 
                     <li className="nav_elements display_colum">
-                        <Link className="nav_item" to="/">Home</Link>
+                        <Link className="nav_item" to="/">Nosotros</Link>
                     </li>
 
                     <li className="nav_elements display_colum">
-                        <Link className="nav_item" to="/">Home</Link>
+                        <Link className="nav_item" to="/">Documentación</Link>
                     </li>
 
                 </ul>
